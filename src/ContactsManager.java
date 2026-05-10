@@ -1,25 +1,24 @@
-class ContactsManager {
-    Contact[] myFriends;
-    int friendsCount;
+public class ContactsManager {
+    Contact[] mesAmis;
+    int nombreAmis;
 
-
-    //construteur
+    // Constructeur
     ContactsManager() {
-        this.friendsCount = 0;
-        this.myFriends = new Contact[500];
+        this.nombreAmis = 0;
+        this.mesAmis = new Contact[500];
     }
 
-    // Méthode addContact
-    void addContact(Contact contact) {
-        myFriends[friendsCount] = contact;
-        friendsCount++;
+    //Ajouter un contact
+    void ajouterContact(Contact contact) {
+        mesAmis[nombreAmis] = contact;
+        nombreAmis++;
     }
 
-    // Méthode searchContact
-    Contact searchContact(String searchName) {
-        for (int i = 0; i < friendsCount; i++) {
-            if (myFriends[i].name.equals(searchName)) {
-                return myFriends[i];
+    //Rechercher un contact par nom
+    Contact rechercherContact(String nomRecherche) {
+        for (int i = 0; i < nombreAmis; i++) {
+            if (mesAmis[i].nom.equals(nomRecherche)) {
+                return mesAmis[i];
             }
         }
         return null;
