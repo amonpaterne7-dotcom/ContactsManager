@@ -1,46 +1,46 @@
 public class Main {
     public static void main(String[] args) {
 
-        //1. Créer le gestionnaire de contacts
-        ContactsManager monGestionnaireContacts = new ContactsManager();
+        // 1. Create the ContactsManager object
+        ContactsManager myContactsManager = new ContactsManager();
 
-        //Premier contact
+        // 2. First contact
         Contact contact1 = new Contact();
-        contact1.nom = "joëlle";
-        contact1.numeroDeTelephone = "0503567898";
-        monGestionnaireContacts.ajouterContact(contact1);
+        contact1.name = "Joëlle";
+        contact1.phoneNumber = "0503567898";
+        myContactsManager.addContact(contact1);
 
-        //Deuxième contact
+        // 3. Second contact
         Contact contact2 = new Contact();
-        contact2.nom = "Elysée";
-        contact2.numeroDeTelephone = "0120349590";
-        monGestionnaireContacts.ajouterContact(contact2);
+        contact2.name = "Elysée";
+        contact2.phoneNumber = "0120349590";
+        myContactsManager.addContact(contact2);
 
-        //Troisième contact
+        // 4. Third contact
         Contact contact3 = new Contact();
-        contact3.nom = "Ivan";
-        contact3.numeroDeTelephone = "05956758940";
-        monGestionnaireContacts.ajouterContact(contact3);
+        contact3.name = "Ivan";
+        contact3.phoneNumber = "05956758940";
+        myContactsManager.addContact(contact3);
 
-        //Quatrième contact
+        // 5. Fourth contact
         Contact contact4 = new Contact();
-        contact4.nom = "Paul David";
-        contact4.numeroDeTelephone = "0134578909";
-        monGestionnaireContacts.ajouterContact(contact4);
+        contact4.name = "Paul David";
+        contact4.phoneNumber = "0134578909";
+        myContactsManager.addContact(contact4);
 
-        //Cinquième contact
+        // 6. Fifth contact
         Contact contact5 = new Contact();
-        contact5.nom = "Jennifer";
-        contact5.numeroDeTelephone = "0705060708";
-        monGestionnaireContacts.ajouterContact(contact5);
+        contact5.name = "Jennifer";
+        contact5.phoneNumber = "0705060708";
+        myContactsManager.addContact(contact5);
 
-        //Rechercher un contact et afficher son numéro
-        Contact trouve = monGestionnaireContacts.rechercherContact("Jennifer");
-        if (trouve != null) {
-            System.out.println("Contact trouvé : " + trouve.nom);
-            System.out.println("Numéro : " + trouve.numeroDeTelephone);
+        // 7. Search a contact and display phone number
+        Contact found = myContactsManager.searchContact("Jennifer");
+        if (found != null) {
+            System.out.println("Contact found : " + found.name);
+            System.out.println("Phone number  : " + found.phoneNumber);
         } else {
-            System.out.println("Contact non trouvé.");
+            System.out.println("Contact not found.");
         }
     }
 }

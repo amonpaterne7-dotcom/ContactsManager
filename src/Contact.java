@@ -1,5 +1,4 @@
 public class Contact {
-
-    String nom;
-    String numeroDeTelephone;
+    String name;
+    String phoneNumber;
 }

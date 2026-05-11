@@ -1,24 +1,24 @@
 public class ContactsManager {
-    Contact[] mesAmis;
-    int nombreAmis;
+    Contact[] contacts;
+    int contactCount;
 
-    // Constructeur
+    // Default constructor
     ContactsManager() {
-        this.nombreAmis = 0;
-        this.mesAmis = new Contact[500];
+        this.contactCount = 0;
+        this.contacts = new Contact[500];
     }
 
-    //Ajouter un contact
-    void ajouterContact(Contact contact) {
-        mesAmis[nombreAmis] = contact;
-        nombreAmis++;
+    // Add a contact
+    void addContact(Contact contact) {
+        contacts[contactCount] = contact;
+        contactCount++;
     }
 
-    //Rechercher un contact par nom
-    Contact rechercherContact(String nomRecherche) {
-        for (int i = 0; i < nombreAmis; i++) {
-            if (mesAmis[i].nom.equals(nomRecherche)) {
-                return mesAmis[i];
+    // Search a contact by name
+    Contact searchContact(String searchName) {
+        for (int i = 0; i < contactCount; i++) {
+            if (contacts[i].name.equals(searchName)) {
+                return contacts[i];
             }
         }
         return null;
