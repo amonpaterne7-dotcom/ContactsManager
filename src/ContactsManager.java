@@ -1,26 +1,27 @@
 public class ContactsManager {
-    Contact[] contacts;
-    int contactCount;
 
-    // Default constructor
+    Contact[] contacts;  // Tableau de contacts
+    int contactCount;    // Nombre de contacts enregistrés
+
+    // Initialise un carnet vide
     ContactsManager() {
         this.contactCount = 0;
-        this.contacts = new Contact[500];
+        this.contacts = new Contact[100];
     }
 
-    // Add a contact
+    // Ajoute un contact au carnet
     void addContact(Contact contact) {
         contacts[contactCount] = contact;
         contactCount++;
     }
 
-    // Search a contact by name
+    // Recherche un contact par nom, retourne null si introuvable
     Contact searchContact(String searchName) {
         for (int i = 0; i < contactCount; i++) {
             if (contacts[i].name.equals(searchName)) {
-                return contacts[i];
+                return contacts[i]; // Contact trouvé
             }
         }
-        return null;
+        return null; // Aucun résultat
     }
 }

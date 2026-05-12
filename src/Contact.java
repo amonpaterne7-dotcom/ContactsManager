@@ -1,4 +1,4 @@
 public class Contact {
-    String name;
-    String phoneNumber;
+    String name;        // Nom du contact
+    String phoneNumber; // Numéro de téléphone
 }
