@@ -6,7 +6,7 @@ public class ContactsManager {
     // Initialise un carnet vide
     ContactsManager() {
         this.contactCount = 0;
-        this.contacts = new Contact[100];
+        this.contacts = new Contact[500];
     }
 
     // Ajoute un contact au carnet
